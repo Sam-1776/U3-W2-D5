@@ -1,0 +1,18 @@
+<div *ngIf="tempo === 0; else recuperoBlock">
+    <div *ngIf="todos.length; else elseBlock">
+        <div *ngFor="let todo of todos">
+            <ul *ngIf="todo.completed === true; else elseBlock">
+                <li>{{todo.title}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<ng-template #recuperoBlock>
+    <h3>{{recupero}}</h3>
+</ng-template>
+
+<ng-template #elseBlock>
+    <h3>{{notodo}}</h3>
+</ng-template>
+

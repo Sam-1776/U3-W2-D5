@@ -1,0 +1,26 @@
+<div>
+    <input type="text" [(ngModel)]="todo">
+    <button (click)="addTodo(todo)">ADD</button>
+</div>
+<hr>
+<div *ngIf="tempo === 0; else recuperoBlock">
+    <div *ngIf="todos.length; else elseBlock">
+        <div *ngFor="let todo of todos, let i = index">
+            <div *ngIf="todo.completed === false; else elseBlock">
+                <ul>
+                    <li>{{todo.title}} 
+                        <button (click)="madeIt(todo.id, i)">CHECK</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #recuperoBlock>
+    <h3>{{recupero}}</h3>
+</ng-template>
+
+<ng-template #elseBlock>
+    <h3>{{noTodo}}</h3>
+</ng-template>
