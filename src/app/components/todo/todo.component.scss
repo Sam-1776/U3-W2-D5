@@ -1,11 +1,16 @@
-input{
-    border-radius: 10px;
-    border: 1px solid whitesmoke;
-    width: 350px;
-    padding: .5rem;
-    background-color: transparent;
-    color: whitesmoke;
-    margin-left: 24px;
+#add{
+    border-bottom: 1px solid whitesmoke;
+    display: flex;
+    align-items: center;
+    input{
+        border-radius: 10px;
+        border: 1px solid whitesmoke;
+        width: 350px;
+        padding: .5rem;
+        background-color: transparent;
+        color: whitesmoke;
+        margin-left: 24px;
+    }
 }
 button{
     border: 1px solid whitesmoke;
@@ -15,10 +20,4 @@ button{
     padding: .4rem .8rem;
     margin-left: 16px;
     cursor: pointer;
-}
-
-#add{
-    border-bottom: 1px solid whitesmoke;
-    display: flex;
-    align-items: center;
 }

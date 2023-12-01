@@ -6,12 +6,13 @@ a{
     text-decoration: none;
     font-weight: bold;
     color: whitesmoke;
-}
-a:last-child{
-    margin-left: 12px;
-}
-a:hover{
-    color: plum;
+
+    &:last-child{
+        margin-left: 12px;
+    }
+    &:hover{
+        color: plum;
+    }
 }
 .active{
     color: rgb(202, 50, 202);

@@ -12,7 +12,7 @@
                 <div *ngIf="todo.completed === false; else elseBlock">
                     <ul>
                         <li>{{todo.title}} 
-                            <button (click)="madeIt(todo.id, i)">CHECK</button>
+                            <button (click)="madeIt(todo.id, i)"><i class="fas fa-check"></i></button>
                         </li>
                     </ul>
                 </div>
