@@ -11,4 +11,8 @@ body{
 }
 li{
     font-size: 1.2rem;
+    &::marker{
+        content: '- ';
+        font-size: 1.2rem;
+    }
 }
