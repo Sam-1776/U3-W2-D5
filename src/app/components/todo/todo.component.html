@@ -1,17 +1,21 @@
-<div>
-    <input type="text" [(ngModel)]="todo">
-    <button (click)="addTodo(todo)">ADD</button>
+<div class="container" id="add">
+    <h1>To-Do List</h1>
+    <div id="form">
+        <input type="text" [(ngModel)]="todo">
+        <button (click)="addTodo(todo)">ADD</button>
+    </div>
 </div>
-<hr>
-<div *ngIf="tempo === 0; else recuperoBlock">
-    <div *ngIf="todos.length; else elseBlock">
-        <div *ngFor="let todo of todos, let i = index">
-            <div *ngIf="todo.completed === false; else elseBlock">
-                <ul>
-                    <li>{{todo.title}} 
-                        <button (click)="madeIt(todo.id, i)">CHECK</button>
-                    </li>
-                </ul>
+<div class="container">
+    <div *ngIf="tempo === 0; else recuperoBlock" >
+        <div *ngIf="todos.length; else elseBlock">
+            <div *ngFor="let todo of todos, let i = index">
+                <div *ngIf="todo.completed === false; else elseBlock">
+                    <ul>
+                        <li>{{todo.title}} 
+                            <button (click)="madeIt(todo.id, i)">CHECK</button>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
